@@ -1,0 +1,41 @@
+ETF(n)=n-1 {if n is prime};
+ETF(n)=n/(p1*p2*p3*p4....pn)*((p1-1)*(p2-1)*(p3-1)*(p4-1).....(pn-1));
+
+           (a-1)     (b-1)          (x-1)                               
+ETF(n)=(p1^     * p2^      ..... pn^     )*(ETF(p1)*ETF(p2)..........ETF(pn));
+
+ETF(p^k) = (p^(k - 1))*(p - 1)    {if p is prime}                            
+ETF(mn) = ETF(m) * ETF(n)      {if m and n are coprime i.e. gcd(m,n) = 1.
+
+The function fi(n) finds the value of f(n):
+
+int fi(int n) 
+{ 
+	int result = n; 
+        for(int i=2;i*i <= n;i++) 
+        { 
+          if (n % i == 0) result -= result / i; 
+           while (n % i == 0) n /= i; 
+        } 
+        if (n > 1) result -= result / n; 
+        return result; 
+}
+
+2nd approach:
+
+int A[10001];
+void func()
+{
+	for(int i=2;i<=100;i++)
+	{
+		if(A[i]==0)
+		A[i]=i-1;
+		for(int j=2*i;j<=10000;j+=i)
+		{
+			if(A[j]==0)
+			A[j]=j;
+			A[j]=(A[j]*(i-1))/i;
+		}
+	}
+}
+			

@@ -1,0 +1,10 @@
+Apothem = (s)/(2*tan(pi/n))    ; s=sidelength,pi=(22/7),n=no.ofsides;
+
+Area = (perimeter*apothem)/2   ; perimeter=n*s;
+
+Area = b/2 + i - 1                ; b=no.ofboundarypoints,i=no.ofinteriorpoints;
+
+Area = ((xi*y(i+1) + x(i+1)*y(i+2) + ....... + x(i+n-1)*yi) - (yi*x(i+1) + y(i+1)*x(i+2) + ....... + y(i+n-1)*xi))/2    ; remember to repeat first term at last.
+
+radius of circumcircle of triangle = abc/root((a+b+c)*(a+b-c)*(a+c-b)*(b+c-a))
+area = pi*radius*radius

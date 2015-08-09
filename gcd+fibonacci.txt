@@ -1,0 +1,12 @@
+gcd(fib(i),fib(j))=fib(gcd(i,j)).
+F(n+k) = F(k)*F(n+1) + F(k-1)*F(n)
+F(n*k)%F(n) is 0
+F(n+1)*F(n-1) - F(n)*F(n) = (-1)^n
+F(1)^2 + F(2)^2.. + F(n)^2 = F(n)*F(n+1)
+
+the number of pairs (where (a,b) is the same as (b,a)) with LCM(a,b)=n is equal to:
+
+((2e1+1)(2e2+1)...(2ek+1)+1)/2
+Where
+
+n=pe11·pe22·...·pekk,pi prime ?1=i=k

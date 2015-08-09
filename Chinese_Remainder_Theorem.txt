@@ -1,0 +1,27 @@
+//http://www.youtube.com/watch?v=Y5RcMWiUyyE
+
+
+
+If we want to find a 'x' such that :
+
+x = a1 (mod n1) //here '=' denotes implies symbol: three lines.
+
+x = a2 (mod n2)
+
+x = a3 (mod n3)
+
+If we mod x by n1 we ge a1, mod by n2 gives a2, and mod by n3 gives a3.
+
+To find 'x' : 
+
+M=n1*n2*n3
+
+x = (a1*m1*y1+a2*m2*y2+a3*m3*y3) (mod M)      //here '=' denotes implies symbol: three lines.
+
+m1=M/n1, m2=M/n2, m3=M/n3.
+
+y1=invmodulo(m1,n1) i.e. (m1^(-1))%n1.
+y2=invmodulo(m2,n2)
+y3=invmodulo(m3,n3).
+
+compute 'x' and then modulo it by M. :) :)

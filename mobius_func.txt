@@ -1,0 +1,37 @@
+Mobious Function(mu[x] -> mobius function of x)
+
+The Möbius function is given by
+
+mu(n)={
+	0   if n has one or more repeated prime factors;
+ 	1   if n=1;
+	(-1)^k   if n is product of k distinct primes,
+}
+
+mobious() {
+mu[1]=1;
+
+for(i=1;i<=N;++i)
+   for(j=2*i;j<=N;j+=i) mu[j]-=mu[i]
+
+}
+
+Applications
+
+1. Square free integers less than or equal to N 
+
+for ( int i = 1; i <= (int)(sqrt(n)); i++ ) sum += (mu[i]*n)/(i*i)
+return sum;
+
+2. Let F(x) = number of sequences (p1,p2,p3,, pn) such that p1 <= x1, p2 <= x2.. and pn <= xn and gcd(p1,p2,p3,..,pn) = x
+
+(ALGO)
+F(x) {
+	int x_n = min(x1,x2,x3,.. xn);
+	pro = 1;
+	for ( int j = 1; j <= k; j++ ) pro = pro*(a[j]/i);
+	for ( int i = x; i <= x_n; i += x ) sum += mu[i/x]*pro;
+	return sum
+}
+
+

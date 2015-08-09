@@ -1,0 +1,9 @@
+http://comeoncodeon.wordpress.com/2011/10/09/modular-multiplicative-inverse/
+
+
+If m is not a prime in (a/b)%m , we can use Euler’s Theorem.
+
+
+(b^(-1))%m = (b^(etf(m)-1))%m
+
+inplace of (b^(m-2))%m , when m is prime and coprime to b.
