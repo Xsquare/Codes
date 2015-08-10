@@ -5,12 +5,12 @@
 #include <cstring>
 #include <cmath>
 #include <cstdlib>
-#include <iostream>
 #include <vector>
 #include <algorithm>
 #include <queue>
 #include <set>
 #include <map>
+#define lli long long
 
 using namespace std;
 
