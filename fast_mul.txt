@@ -1,0 +1,10 @@
+lli fast_mul(lli a,lli b){
+   long double res = a;
+   res *= b;
+   long long int c = (long long)(res / M);
+   a *= b;
+   a -= c * M;
+   a %= M;
+   if (a < 0) a += M;
+   return a;
+}

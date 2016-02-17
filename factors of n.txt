@@ -1,0 +1,34 @@
+If n | a  && n | b, then, n^2 | (a*b)
+To find factors of n^2, just find factors of n and their product combinations result are the factors of n^2.
+
+Sum of greatest odd divisors of n+1,n+2,n+3,..... 2*n is n^2
+
+Summation of number of divisors of a number from 1 to x is F(x)
+F(x) = f(1) + f(2) .. + f(n), where f(x) is number of divisors of x
+
+F(X) {
+	sum = 0
+	u = floor(sqrt(N))
+	for k = 1; k <= u; k++ ) sum += Floor(N/K)
+	sum = 2*sum-u*u
+}
+
+
+func(x) -> sum of divisors from 1 to x = f(1) + f(2).. f(x) where f(x) = summation of divisors of x
+
+def func(n):
+     sum = 0
+     m=1
+     l=((n)*(n+1))/2     
+     while (n/m)-((n/(m+1))+1) >= 1:
+           sum = sum  + (m*((n/m)-n/(m+1))*(n/(m+1)+(n/m)+1))/2
+           m = m + 1
+           
+     j = 1
+     
+     while j <= n/m:
+             sum = sum + (j*(n/j))
+             j = j+1
+     
+     return sum-l
+ 

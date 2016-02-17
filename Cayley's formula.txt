@@ -1,0 +1,8 @@
+The number of ways to make a graph connected given n vertices and m edges.
+
+First we find the number of connected components and their sizes
+s1, s2, .. sp
+
+ans = (s1.s2.s3... sp)*n^(p-2)
+
+total number of spanning trees in a full labeled graph of n vertices -> n^(n-2)

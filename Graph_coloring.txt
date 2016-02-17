@@ -1,0 +1,5 @@
+Simple cycle of length N, ways to proper color it
+proper coloring such that no tow adjacent vertex have same color
+chromatic polynomial  for cycle Cn is (k-1)^n + ((-1)^(n))*(k-1)
+chromatic polynomial for tree with n vertices is k*(k-1)^(n-1)
+Recurrence for this is -> T(n,k) = k*((k-1)^(n-1)) - T(n-1, k)
