@@ -1,13 +1,12 @@
 #include <bits/stdc++.h>
+#define MAX 50004
 
 using namespace std;
 
 vector < pair<int, pair<int,int> > > v;
-int ans[200005];
-int A[30005];
-int cnt;
+int ans[MAX];
+int A[MAX];
 int blocks;
-int vis[1000005];
 
 void add(int pos)
 {
@@ -27,8 +26,7 @@ bool func(pair <int, pair<int,int> > p1, pair <int, pair<int,int> > p2)
 
 int main()
 {
-    int n,q,x,y,l=0,r=0,m;
-    cnt = 0;
+    int n,q,x,y;
 
     scanf("%d", &n);
     blocks = (int)sqrt(n);
@@ -46,7 +44,7 @@ int main()
 
     int L = 0 ,R = 0;
     add(0);
-    for(int i = 0; i < m; ++i){
+    for(int i = 0; i < q; ++i){
         int st = v[i].second.first, en = v[i].second.second;
         while(R > en){
             rem(R);
