@@ -1,7 +1,7 @@
 // calculates if the number is prime or not i.e if ( miller(n,2) ) is true or not
-long long mulmod(long long a, long long b, long long c)
+lli mulmod(lli a, lli b, lli c)
 {
-	long long x = 0, y = a%c;
+	lli x = 0, y = a%c;
 	while(b>0)
 	{
 		if(b&1) x = (x+y)%c;
@@ -11,9 +11,9 @@ long long mulmod(long long a, long long b, long long c)
 	return x;
 }
 
-long long modulo(long long a, long long b, long long c)
+lli modulo(lli a, lli b, lli c)
 {
-	long long x = 1, y = a%c;
+	lli x = 1, y = a%c;
 	while(b>0)
 	{
 		if(b&1) x = mulmod(x,y,c);
@@ -23,12 +23,12 @@ long long modulo(long long a, long long b, long long c)
 	return x;
 }
 
-bool miller(long long p, int iter)
+bool miller(lli p, int iter)
 {
     	if(p<2) return false;
     	if(p==2) return true;
     	if(!(p&1)) return false;
-    	long long s = p-1, a, temp, mod;
+    	lli s = p-1, a, temp, mod;
         while(!(s&1)) s = s>>1;
     	for(int i=0; i<iter; i++)
     	{
