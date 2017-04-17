@@ -49,11 +49,11 @@ int main()
         
         while ( L < st ) {
             rem(L);
-            l++;
+            L++;
         }
         while ( R <= en ) {
             add(R);
-            r++;
+            R++;
         }
         while ( L > st ) {
             add(L - 1);
