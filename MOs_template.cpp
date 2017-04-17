@@ -46,21 +46,22 @@ int main()
     add(0);
     for(int i = 0; i < q; ++i){
         int st = v[i].second.first, en = v[i].second.second;
-        while(R > en){
-            rem(R);
-            --R;
-        }
-        while(R < en){
-            ++R;
-            add(R);
-        }
-        while(L > st){
-            --L;
-            add(L);
-        }
-        while(L < st){
+        
+        while ( L < st ) {
             rem(L);
-            ++L;
+            l++;
+        }
+        while ( R <= en ) {
+            add(R);
+            r++;
+        }
+        while ( L > st ) {
+            add(L - 1);
+            L--;
+        }
+        while ( R > en + 1) {
+            rem(R - 1);
+            R--;
         }
         // store answer here
     }
