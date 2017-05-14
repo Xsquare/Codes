@@ -53,9 +53,9 @@ void build(node *curr, int left, int right)
 int main()
 {
   node *root = new node(0, NULL, NULL);
-	build(root, 0, n - 1);
+  build(root, 0, n - 1);
 	
-	segment[0] = root;
+  segment[0] = root;
   
   //populate the segment array now.
   
