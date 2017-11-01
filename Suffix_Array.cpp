@@ -67,7 +67,8 @@ int main()
 	cin >> q;
 	while ( q-- ) {
 	    cin >> x;
-	    cout << lcp(0, n - x) << endl;
+	    x--;
+	    cout << lcp(0, x) << endl;
 	}
 	return 0;
 }
